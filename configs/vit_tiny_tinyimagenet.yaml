@@ -1,0 +1,65 @@
+experiment:
+  name: vit_tiny_tinyimagenet_elr_collapse
+  output_dir: outputs/full
+  seed: 20260726
+  data_seed: 1729
+  deterministic: true
+  device: cuda
+  resume: true
+model:
+  image_size: 64
+  patch_size: 8
+  in_channels: 3
+  num_classes: 200
+  embed_dim: 192
+  depth: 12
+  num_heads: 3
+  mlp_ratio: 4.0
+  qkv_bias: true
+  drop_rate: 0.0
+  attn_drop_rate: 0.0
+  drop_path_rate: 0.0
+  norm_eps: 1.0e-6
+  init_std: 0.02
+data:
+  root: data/tiny-imagenet-200
+  download: false
+  num_workers: 4
+  pin_memory: true
+  global_batch_size: 128
+  micro_batch_size: 128
+  auto_microbatch: true
+  probe_size: 2048
+  drop_last: true
+optimizer:
+  name: adamw
+  betas: [0.9, 0.95]
+  eps: 1.0e-8
+  weight_decay: 0.0
+  peak_lr: 6.0e-4
+  final_lr: 6.0e-5
+  total_steps: 20000
+  warmup_steps: 500
+  control_start_step: 2500
+  decay_start_step: 18000
+  grad_clip_norm: null
+control:
+  policy: hidden_matrices
+  projection_eps: 1.0e-12
+  schedules: [constant, linear_up, linear_down, cyclic]
+  cyclic_period_steps: 5000
+  cyclic_amplitude: 0.5
+  linear_up_final: 2.0
+  linear_down_final: 0.3333333333333333
+  modify_optimizer_moments: false
+logging:
+  train_log_interval: 1
+  probe_interval: 100
+  val_interval: 1000
+  angular_interval: 20
+  checkpoint_interval: 500
+  ema_beta: 0.99
+radial_audit:
+  scales: [0.5, 2.0]
+  groups: [attn_qkv, attn_proj, mlp_fc1, mlp_fc2, all_hidden, patch_embed,
+           classifier_head, pos_embed, cls_token, layernorm_gains]

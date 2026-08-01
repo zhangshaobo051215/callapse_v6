@@ -1,0 +1,17 @@
+_base_: vit_tiny_tinyimagenet_residual_stream_symmetry_v1.yaml
+experiment:
+  name: vit_tiny_tinyimagenet_elr_collapse_residual_stream_symmetry_v1_tensor_monitoring
+  output_dir: outputs/residual_stream_symmetry_v1_tensor_monitoring
+  seed: 20260726
+  data_seed: 1729
+  deterministic: true
+  device: cuda
+  resume: true
+logging:
+  train_log_interval: 1
+  probe_interval: 100
+  val_interval: 1000
+  angular_interval: 20
+  tensor_monitor_interval: 20
+  checkpoint_interval: 2500
+  ema_beta: 0.99

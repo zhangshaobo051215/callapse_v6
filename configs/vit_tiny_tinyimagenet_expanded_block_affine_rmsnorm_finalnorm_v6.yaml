@@ -1,0 +1,27 @@
+_base_: vit_tiny_tinyimagenet_rmsnorm_v5.yaml
+experiment:
+  name: vit_tiny_tinyimagenet_elr_collapse_expanded_block_affine_rmsnorm_finalnorm_v6
+  output_dir: outputs/expanded_block_affine_rmsnorm_finalnorm_v6_tensor_monitoring
+  seed: 20260726
+  data_seed: 1729
+  deterministic: true
+  device: cuda
+  resume: true
+control:
+  # Identical q(t)-controlled scope to V5.  The final RMSNorm gain remains
+  # outside this policy and keeps the ordinary/base optimizer LR.
+  policy: expanded_block_affine_v2
+  projection_eps: 1.0e-12
+  split_fused_qkv: true
+  schedules: [constant, linear_up, linear_down, cyclic]
+  cyclic_period_steps: 5000
+  cyclic_amplitude: 0.5
+  linear_up_final: 2.0
+  linear_down_final: 0.3333333333333333
+  modify_optimizer_moments: false
+  constant_reference_alignment:
+    enabled: true
+    tensor: norm.weight
+    reference_branch: constant
+    mode: frobenius_norm
+    tolerance: 1.0e-5

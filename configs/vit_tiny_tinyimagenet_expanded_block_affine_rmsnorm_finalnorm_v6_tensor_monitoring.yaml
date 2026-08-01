@@ -1,0 +1,18 @@
+_base_: vit_tiny_tinyimagenet_expanded_block_affine_rmsnorm_finalnorm_v6.yaml
+experiment:
+  name: vit_tiny_tinyimagenet_elr_collapse_expanded_block_affine_rmsnorm_finalnorm_v6_tensor_monitoring
+  output_dir: outputs/expanded_block_affine_rmsnorm_finalnorm_v6_tensor_monitoring
+  seed: 20260726
+  data_seed: 1729
+  deterministic: true
+  device: cuda
+  resume: true
+logging:
+  train_log_interval: 1
+  probe_interval: 100
+  val_interval: 1000
+  angular_interval: 20
+  tensor_monitor_interval: 20
+  control_unit_monitoring: true
+  checkpoint_interval: 2500
+  ema_beta: 0.99
