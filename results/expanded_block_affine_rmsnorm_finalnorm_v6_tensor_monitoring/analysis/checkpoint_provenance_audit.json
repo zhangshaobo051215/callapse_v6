@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "source_commit": "30984678281830ab61b621e7ec71c85f5f1d9702",
+  "source_commit_note": "The extracted server tree came from the exact verified upload archive; the tarball name and SHA256 bind it to this local commit.",
+  "code_archive": "/root/autodl-tmp/callapse_v6_3098467.tar.gz",
+  "code_archive_sha256": "f3f8057eb7e8deb7a057842efaaf2932bad1b0087808d9dba9fadf30b2d189a6",
+  "expected_code_archive_sha256": "f3f8057eb7e8deb7a057842efaaf2932bad1b0087808d9dba9fadf30b2d189a6",
+  "prefix_checkpoint": "prefix/checkpoint_step_002500.pt",
+  "prefix_checkpoint_sha256": "48789c6d64c46e1bdbbd8922db01ec4472d4ca72ce2911c6f27a5a6bfed66773",
+  "expected_prefix_checkpoint_sha256": "48789c6d64c46e1bdbbd8922db01ec4472d4ca72ce2911c6f27a5a6bfed66773",
+  "resolved_config_sha256": "746e4f4e077c50ac6650b0562c8c09c269425c18ba3f722adfb0c1c339e23b3d",
+  "checks": {
+    "code_archive_sha256_matches": true,
+    "prefix_sha256_matches": true,
+    "all_final_checkpoints_at_step_20000": true,
+    "all_checkpoint_configs_match_resolved": true,
+    "all_checkpoint_control_units_equal_148": true
+  },
+  "branches": [
+    {
+      "branch": "constant",
+      "path": "branches/constant/checkpoint_step_020000.pt",
+      "size_bytes": 65255258,
+      "mtime_ns": 1785607089966535689,
+      "global_state_step": 20000,
+      "config_sha256": "746e4f4e077c50ac6650b0562c8c09c269425c18ba3f722adfb0c1c339e23b3d",
+      "config_matches_resolved": true,
+      "controlled_names_count": 148,
+      "checkpoint_git_commit": null
+    },
+    {
+      "branch": "linear_up",
+      "path": "branches/linear_up/checkpoint_step_020000.pt",
+      "size_bytes": 65255258,
+      "mtime_ns": 1785608696871062229,
+      "global_state_step": 20000,
+      "config_sha256": "746e4f4e077c50ac6650b0562c8c09c269425c18ba3f722adfb0c1c339e23b3d",
+      "config_matches_resolved": true,
+      "controlled_names_count": 148,
+      "checkpoint_git_commit": null
+    },
+    {
+      "branch": "linear_down",
+      "path": "branches/linear_down/checkpoint_step_020000.pt",
+      "size_bytes": 65255258,
+      "mtime_ns": 1785610317616088928,
+      "global_state_step": 20000,
+      "config_sha256": "746e4f4e077c50ac6650b0562c8c09c269425c18ba3f722adfb0c1c339e23b3d",
+      "config_matches_resolved": true,
+      "controlled_names_count": 148,
+      "checkpoint_git_commit": null
+    },
+    {
+      "branch": "cyclic",
+      "path": "branches/cyclic/checkpoint_step_020000.pt",
+      "size_bytes": 65255258,
+      "mtime_ns": 1785611931570688666,
+      "global_state_step": 20000,
+      "config_sha256": "746e4f4e077c50ac6650b0562c8c09c269425c18ba3f722adfb0c1c339e23b3d",
+      "config_matches_resolved": true,
+      "controlled_names_count": 148,
+      "checkpoint_git_commit": null
+    }
+  ]
+}

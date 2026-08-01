@@ -1,0 +1,165 @@
+{
+  "passed": true,
+  "tolerance": 1e-05,
+  "n_rows": 518592,
+  "n_tensors": 148,
+  "n_controlled_tensors": 148,
+  "n_uncontrolled_tensors": 0,
+  "branches": [
+    "constant",
+    "cyclic",
+    "linear_down",
+    "linear_up"
+  ],
+  "checks": [
+    {
+      "check": "all_four_branches_present",
+      "passed": true,
+      "value": 4,
+      "details": "present=['constant', 'cyclic', 'linear_down', 'linear_up']; missing=[]"
+    },
+    {
+      "check": "monitor_files_found",
+      "passed": true,
+      "value": 4,
+      "details": ""
+    },
+    {
+      "check": "required_columns_present",
+      "passed": true,
+      "value": 14,
+      "details": "missing=[]"
+    },
+    {
+      "check": "tensor_sets_identical_across_branches",
+      "passed": true,
+      "value": 148,
+      "details": "constant=148; cyclic=148; linear_down=148; linear_up=148"
+    },
+    {
+      "check": "catalog_matches_recorded_tensors",
+      "passed": true,
+      "value": 148,
+      "details": "missing_from_records=[]; missing_from_catalog=[]"
+    },
+    {
+      "check": "every_recorded_tensor_has_plot",
+      "passed": true,
+      "value": 148,
+      "details": "missing_plots=[]"
+    },
+    {
+      "check": "no_duplicate_samples",
+      "passed": true,
+      "value": 0,
+      "details": ""
+    },
+    {
+      "check": "sample_step_grids_match_across_branches",
+      "passed": true,
+      "value": 0,
+      "details": ""
+    },
+    {
+      "check": "every_snapshot_contains_every_tensor",
+      "passed": true,
+      "value": 0,
+      "details": "expected_tensors_per_snapshot=148"
+    },
+    {
+      "check": "pre_and_post_steps_are_aligned",
+      "passed": true,
+      "value": 0.0,
+      "details": ""
+    },
+    {
+      "check": "actual_optimizer_group_lr_matches_policy",
+      "passed": true,
+      "value": 9.689764645683685e-13,
+      "details": "controlled=base_lr*q_now; uncontrolled=base_lr"
+    },
+    {
+      "check": "lr_over_frobenius_uses_pre_update_norm",
+      "passed": true,
+      "value": 9.880100102289643e-13,
+      "details": ""
+    },
+    {
+      "check": "lr_over_rms_uses_pre_update_rms",
+      "passed": true,
+      "value": 9.74549404103491e-13,
+      "details": ""
+    },
+    {
+      "check": "norms_are_finite_and_positive",
+      "passed": true,
+      "value": 2592960,
+      "details": "total_values=2592960"
+    },
+    {
+      "check": "lr_metrics_are_finite_and_nonnegative",
+      "passed": true,
+      "value": 1555776,
+      "details": "total_values=1555776"
+    },
+    {
+      "check": "all_control_units_recorded",
+      "passed": true,
+      "value": 148,
+      "details": "controlled=148; uncontrolled=0"
+    },
+    {
+      "check": "controlled_target_uses_q_next",
+      "passed": true,
+      "value": 2.229472590370376e-13,
+      "details": ""
+    },
+    {
+      "check": "controlled_post_projection_norm_matches_q_next_target",
+      "passed": true,
+      "value": 1.2788306084965455e-06,
+      "details": "tolerance=1e-05"
+    },
+    {
+      "check": "controlled_projection_error_within_tolerance",
+      "passed": true,
+      "value": 1.2788306084965455e-06,
+      "details": "tolerance=1e-05"
+    },
+    {
+      "check": "controlled_lr_over_frobenius_matches_reference",
+      "passed": true,
+      "value": 1.3265370200077342e-06,
+      "details": "maximum |ratio-1|; tolerance=1e-05"
+    },
+    {
+      "check": "controlled_lr_over_rms_matches_reference",
+      "passed": true,
+      "value": 1.3265370200077342e-06,
+      "details": "maximum |ratio-1|; tolerance=1e-05"
+    }
+  ],
+  "generated_family_atlases": [
+    "analysis/control_unit_monitoring/family_atlas/norm_absolute/attention_output.png",
+    "analysis/control_unit_monitoring/family_atlas/norm_absolute/attention_qkv.png",
+    "analysis/control_unit_monitoring/family_atlas/norm_absolute/input_embedding.png",
+    "analysis/control_unit_monitoring/family_atlas/norm_absolute/mlp_input.png",
+    "analysis/control_unit_monitoring/family_atlas/norm_absolute/mlp_output.png",
+    "analysis/control_unit_monitoring/family_atlas/norm_over_reference/attention_output.png",
+    "analysis/control_unit_monitoring/family_atlas/norm_over_reference/attention_qkv.png",
+    "analysis/control_unit_monitoring/family_atlas/norm_over_reference/input_embedding.png",
+    "analysis/control_unit_monitoring/family_atlas/norm_over_reference/mlp_input.png",
+    "analysis/control_unit_monitoring/family_atlas/norm_over_reference/mlp_output.png",
+    "analysis/control_unit_monitoring/family_atlas/lr_over_frobenius/attention_output.png",
+    "analysis/control_unit_monitoring/family_atlas/lr_over_frobenius/attention_qkv.png",
+    "analysis/control_unit_monitoring/family_atlas/lr_over_frobenius/input_embedding.png",
+    "analysis/control_unit_monitoring/family_atlas/lr_over_frobenius/mlp_input.png",
+    "analysis/control_unit_monitoring/family_atlas/lr_over_frobenius/mlp_output.png",
+    "analysis/control_unit_monitoring/family_atlas/lr_over_rms/attention_output.png",
+    "analysis/control_unit_monitoring/family_atlas/lr_over_rms/attention_qkv.png",
+    "analysis/control_unit_monitoring/family_atlas/lr_over_rms/input_embedding.png",
+    "analysis/control_unit_monitoring/family_atlas/lr_over_rms/mlp_input.png",
+    "analysis/control_unit_monitoring/family_atlas/lr_over_rms/mlp_output.png"
+  ],
+  "per_tensor_plot_manifest": "analysis/control_unit_monitoring/plot_manifest.csv"
+}

@@ -1,0 +1,18 @@
+check,passed,value,details
+required_columns_present,True,17.0,missing=[]
+all_four_branches_present,True,4.0,"present=['constant', 'cyclic', 'linear_down', 'linear_up']"
+all_files_found,True,4.0,
+only_declared_tensor_is_aligned,True,1.0,observed=['norm.weight']
+reference_branch_is_constant,True,1.0,observed=['constant']
+no_duplicate_rows,True,0.0,
+every_step_recorded_for_every_branch,True,17500.0,bad_branches=[]
+all_metrics_are_finite,True,630000.0,total=630000
+all_norms_are_positive,True,280000.0,total=280000
+aligned_tensor_uses_uncontrolled_base_lr,True,0.0,tolerance=1e-05
+post_alignment_norm_matches_constant_target,True,2.1669991385094926e-07,tolerance=1e-05
+recorded_alignment_error_within_tolerance,True,2.166999138509493e-07,tolerance=1e-05
+constant_branch_is_not_projected,True,0.0,
+all_targets_equal_same_step_constant_norm,True,0.0,tolerance=1e-05
+pre_update_norms_align_across_branches,True,2.1669991385094926e-07,tolerance=1e-05
+actual_lrs_align_across_branches,True,0.0,tolerance=1e-05
+only_nonconstant_branches_are_projected,True,52500.0,expected=52500

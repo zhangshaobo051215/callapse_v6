@@ -1,0 +1,40 @@
+{
+  "output": "/root/autodl-tmp/callapse_v6/outputs/expanded_block_affine_rmsnorm_finalnorm_v6_tensor_monitoring",
+  "threshold": 0.03,
+  "validity_threshold": 1e-05,
+  "total_steps": 20000,
+  "branch_ema_mae": {
+    "linear_up": 0.0371595244631418,
+    "linear_down": 0.2282248840206189,
+    "cyclic": 0.2258967994991997
+  },
+  "branch_max_elr_relative_error": {
+    "constant": 2.354291432567679e-07,
+    "linear_up": 2.935561290062348e-07,
+    "linear_down": 2.883463813772812e-07,
+    "cyclic": 2.919215387249224e-07
+  },
+  "branch_max_target_norm_relative_error": {
+    "constant": 2.354291979145273e-07,
+    "linear_up": 2.512936987386638e-07,
+    "linear_down": 2.381013359809004e-07,
+    "cyclic": 2.381056134481696e-07
+  },
+  "max_elr_relative_error": 2.935561290062348e-07,
+  "max_target_norm_relative_error": 2.512936987386638e-07,
+  "final_checkpoints": {
+    "constant": true,
+    "linear_up": true,
+    "linear_down": true,
+    "cyclic": true
+  },
+  "checkpoint_errors": {},
+  "validity_passed": true,
+  "collapse_passed": false,
+  "passed": false,
+  "failing_branches": [
+    "linear_up",
+    "linear_down",
+    "cyclic"
+  ]
+}

@@ -1,0 +1,22 @@
+check,passed,value,details
+all_four_branches_present,True,4.0,"present=['constant', 'cyclic', 'linear_down', 'linear_up']; missing=[]"
+monitor_files_found,True,4.0,
+required_columns_present,True,14.0,missing=[]
+tensor_sets_identical_across_branches,True,148.0,constant=148; cyclic=148; linear_down=148; linear_up=148
+catalog_matches_recorded_tensors,True,148.0,missing_from_records=[]; missing_from_catalog=[]
+every_recorded_tensor_has_plot,True,148.0,missing_plots=[]
+no_duplicate_samples,True,0.0,
+sample_step_grids_match_across_branches,True,0.0,
+every_snapshot_contains_every_tensor,True,0.0,expected_tensors_per_snapshot=148
+pre_and_post_steps_are_aligned,True,0.0,
+actual_optimizer_group_lr_matches_policy,True,9.689764645683685e-13,controlled=base_lr*q_now; uncontrolled=base_lr
+lr_over_frobenius_uses_pre_update_norm,True,9.880100102289643e-13,
+lr_over_rms_uses_pre_update_rms,True,9.74549404103491e-13,
+norms_are_finite_and_positive,True,2592960.0,total_values=2592960
+lr_metrics_are_finite_and_nonnegative,True,1555776.0,total_values=1555776
+all_control_units_recorded,True,148.0,controlled=148; uncontrolled=0
+controlled_target_uses_q_next,True,2.229472590370376e-13,
+controlled_post_projection_norm_matches_q_next_target,True,1.2788306084965455e-06,tolerance=1e-05
+controlled_projection_error_within_tolerance,True,1.2788306084965455e-06,tolerance=1e-05
+controlled_lr_over_frobenius_matches_reference,True,1.3265370200077342e-06,maximum |ratio-1|; tolerance=1e-05
+controlled_lr_over_rms_matches_reference,True,1.3265370200077342e-06,maximum |ratio-1|; tolerance=1e-05

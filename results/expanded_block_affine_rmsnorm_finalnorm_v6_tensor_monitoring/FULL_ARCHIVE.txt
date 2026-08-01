@@ -1,0 +1,5 @@
+callapse_v6_results_20260802.tar.gz
+size_bytes=1941078723
+sha256=fd358ac99b9d5239a7258c4e8f72c532f4e3df400ede3d0e40cd47d6e77722ab
+extracted_files=415
+extracted_bytes=2460247254

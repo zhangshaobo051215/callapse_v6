@@ -1,0 +1,9 @@
+{
+  "python": "3.12.3",
+  "torch": "2.5.1+cu124",
+  "cuda_runtime": "12.4",
+  "cudnn": 90100,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "os": "Linux-5.15.0-97-generic-x86_64-with-glibc2.35",
+  "git_commit": null
+}
